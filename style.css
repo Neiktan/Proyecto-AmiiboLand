@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.cartas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartas-amiibo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: 0 0 20px 0 rgba(80, 238, 65, 0.3);
+}
+
+figure{
+    width: 200px;
+}
+
+.cartas-productos{
+    width: 70%;
+}
+
+/*editar un boton ponerlo bonito*/
