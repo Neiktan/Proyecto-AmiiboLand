@@ -1,8 +1,9 @@
+
 //agregar el boton para cambio de fondo
 
 
 const cardsAmiibo = data => {
-    const cards = data.reduce(( acc, element) => {
+    const cards = data.reduce((acc, element) => {
         return acc + `
             <div class="cartas-amiibo">
             <h2>${element.amiiboSeries}</h2>
@@ -16,16 +17,34 @@ const cardsAmiibo = data => {
                 </div>
             </div>
         `
-    },"")
+    }, "")
     document.querySelector(".cartas").innerHTML = cards
 }
 
 fetch(`https://www.amiiboapi.com/api/amiibo/?pageSize=25&page=1`)
-.then( res => res.json())
-.then( data => {
-    cardsAmiibo(data.amiibo)
-})
+    .then(res => res.json())
+    .then(data => {
+        cardsAmiibo(data.amiibo)
+    })
 
 //fetch(`https://www.amiiboapi.com/api/amiibo/?pageSize=25&page=1`)
 //.then( res => res.json())
 //.then( data => console.log(data))
+
+let swiper = new Swiper(".mySwiper", {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
