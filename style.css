@@ -6,8 +6,59 @@ html {
     scroll-behavior: smooth;
 }
 
-html,
-.body-index {
+/*modo oscuro*/
+#container{
+    background-color: #f8f8f8;
+    position: relative;
+    width: 80px;
+    height: 40px;
+    box-shadow: inset 4px 4px 6px #cecece, 
+                inset -4px -4px 6px #fff;
+    margin: 0px auto;
+    margin-top: 350px;
+    cursor: pointer;
+}
+.toggle{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    transform: scale(.7);
+    background-color: linear-gradient(145deg, #f01010, #7a2881); /*este se puede cambiar a mi gusto*/
+    border-radius: 25px;
+
+    box-shadow: 3px 3px 8px #c4c4c4,
+                -3px -3px 8px #ffff;
+}
+
+#container.active .toggle{
+    left: 40px;
+}
+
+body.active{
+    background-color: #181818;
+    color: white;
+}
+
+/*#toggle{
+    display: none;
+}
+
+#label_toggle{
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 1.5em;
+    color: #081b29;
+    cursor: pointer
+}
+
+.dark{
+    background-color: #181818;
+    color: white;
+}*/
+/*Inicio del carousel*/
+html, .body-index {
     position: relative;
     height: 100%;
 }
@@ -42,6 +93,15 @@ html,
     object-fit: cover;
 }
 
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+/*FIN del carousel*/
+
+
+/*PRODUCTOS*/
 .cartas {
     display: flex;
     flex-wrap: wrap;
@@ -64,4 +124,26 @@ figure {
     width: 70%;
 }
 
-/*editar un boton ponerlo bonito*/
+/*Inicio del boton*/
+.btn-box {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #0ef;
+    border-radius: 19px;
+    font-size: 12px;
+    color: #081b29;
+    letter-spacing: none;
+    font-weight: 600;
+    animation: slideTop 1s ease forwards;
+    animation: 2s;
+    box-shadow: 0 0 5px #0ef,
+        0 0 25px #0ef;
+}
+
+.btn-box:hover {
+    box-shadow: 0 0 5px cyan,
+        0 0 25px cyan, 0 0 50px cyan,
+        0 0 100px cyan, 0 0 200px cyan
+}
+
+/*FIN del boton */
