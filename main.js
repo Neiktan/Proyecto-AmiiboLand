@@ -8,7 +8,7 @@ const cardsAmiibo = data => {
                 </figure>
             ${element.name}
                 <div>
-                    <button class="btn-box">Agregar al carrito</button>
+                    <button class="btn-box" id="agregar">Agregar al carrito</button>
                 </div>
             </div>
         `
@@ -16,11 +16,13 @@ const cardsAmiibo = data => {
     document.querySelector(".cartas").innerHTML = cards
 }
 
+
+const agregar = document.querySelectorAll("#agregar")
+
 const agregarAlCarrito = (nodos, amiibo) => {
 
-    const agregar = document.querySelectorAll(".btn-box")
-
     for (let i = 0; i < nodos.length; i++){
+
         nodos[i].onclick = (e) => {
             console.log("me hacen click")
             console.log(e.target.name)
@@ -31,6 +33,17 @@ const agregarAlCarrito = (nodos, amiibo) => {
         }
     }
 }
+
+agregarAlCarrito(agregar, name)
+
+//Ordenar 
+
+const ordenar = array =>{
+
+    
+}
+
+
 
 //eventoCartas(todasCartas,  character)
 
