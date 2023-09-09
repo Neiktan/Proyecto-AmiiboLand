@@ -15,7 +15,7 @@ html {
     box-shadow: inset 4px 4px 6px #cecece, 
                 inset -4px -4px 6px #fff;
     margin: 0px auto;
-    margin-top: 350px;
+    margin-top: 30px;
     cursor: pointer;
 }
 .toggle{
@@ -27,7 +27,6 @@ html {
     transform: scale(.7);
     background-color: linear-gradient(145deg, #f01010, #7a2881); /*este se puede cambiar a mi gusto*/
     border-radius: 25px;
-
     box-shadow: 3px 3px 8px #c4c4c4,
                 -3px -3px 8px #ffff;
 }
@@ -40,23 +39,6 @@ body.active{
     background-color: #181818;
     color: white;
 }
-
-/*#toggle{
-    display: none;
-}
-
-#label_toggle{
-    display: flex;
-    flex-direction: row-reverse;
-    font-size: 1.5em;
-    color: #081b29;
-    cursor: pointer
-}
-
-.dark{
-    background-color: #181818;
-    color: white;
-}*/
 /*Inicio del carousel*/
 html, .body-index {
     position: relative;

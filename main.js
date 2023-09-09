@@ -19,7 +19,7 @@ const cardsAmiibo = data => {
 
 const agregar = document.querySelectorAll("#agregar")
 
-const agregarAlCarrito = (nodos, amiibo) => {
+const agregarAlCarrito = (nodos, name) => {
 
     for (let i = 0; i < nodos.length; i++){
 
@@ -39,7 +39,9 @@ agregarAlCarrito(agregar, name)
 //Ordenar 
 
 const ordenar = array =>{
-
+    mainOrden.addEvenListener("change", (e)=>{
+        console.log(e.targe.name)
+    })
     
 }
 
@@ -64,10 +66,10 @@ fetch(`https://www.amiiboapi.com/api/amiibo/?pageSize=25&page=1`)
 let toggle = document.getElementById('container');
 let body = document.querySelector('body')
 
-//toggle.onclick = function(){
-//toggle.classList.toggle('active');
-//body.classList.toggle('active');
-//}
+toggle.onclick = function(){
+toggle.classList.toggle('active');
+body.classList.toggle('active');
+}
 
 
 
